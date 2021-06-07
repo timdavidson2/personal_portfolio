@@ -1,82 +1,100 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
 
 :root {
-  --primaryColor: rgba(0, 140, 151, 0.7);
+  --primaryColor: rgba(0, 140, 151, 0.9);
   --secondaryColor: rgba(0, 0, 0, 1);
+  --thirdColor: rgb(0, 255, 255);
   --primaryFont: "Lobster", cursive;
   --secondaryFont: "Roboto", sans-serif;
   --border-radius: 10px;
 }
-/* * { 
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}*/
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  background: var(--primaryColor);
-  border-radius: var(--border-radius);
-  margin-bottom: 20px;
 }
 
-.header h1 {
+li,
+a,
+button {
+  font-family: var(--secondaryFont);
+  font-size: 2rem;
   color: var(--secondaryColor);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: var(--primaryColor);
+  padding: 30px 5%;
+}
+
+.logo {
+  cursor: pointer;
   font-family: var(--primaryFont);
+  margin-right: auto;
+  padding: 10px;
   font-size: 3rem;
-  margin-top: 16px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: var(--thirdColor);
+}
+
+button {
+  padding: 10px 25px;
+  background-color: var(--secondaryColor);
+  color: var(--thirdColor);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
   margin-left: 20px;
 }
 
-.head-links {
-  display: flex;
-  justify-items: flex-end;
-  align-items: center;
-  font-family: var(--secondaryFont);
-  margin-right: 40px;
-}
-
-.head-links li {
-  list-style-type: none;
-  font-size: 2rem;
-  margin-right: 20px;
-}
-
-.head-links a {
-  text-decoration: none;
+button:hover {
   color: var(--secondaryColor);
+  background-color: var(--thirdColor);
 }
 
-/* .top-accent {
-  background-image: url(./images/codeScreen.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 200px;
-  border-radius: 10px;
-} */
-
-.top-accent {
+.accent-img {
   position: relative;
+  text-align: center;
+  color: white;
 }
 
 .bottom-right {
   position: absolute;
-  bottom: 8px;
-  right: 16px;
-  color: var(--secondaryColor);
-  font-family: var(--primaryFont);
+  bottom: 20px;
+  right: 100px;
   font-size: 3rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: var(--border-radius);
-  padding: 10px;
+  font-family: var(--primaryFont);
+  background: var(--primaryColor);
+  padding: 1%;
+  border-radius: 20px;
 }
 
-.top-accent img {
+.accent-img img {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   height: 200px;
-  image-rendering: auto;
-  border-radius: var(--border-radius);
-  opacity: 80%;
 }
