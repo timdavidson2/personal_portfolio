@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
 
 :root {
-  --primaryColor: rgba(179, 193, 238, 0.8);
-  --secondaryColor: rgb(12, 53, 187);
+  --primaryColor: rgba(0, 140, 151, 0.7);
+  --secondaryColor: rgba(0, 0, 0, 1);
   --primaryFont: "Lobster", cursive;
   --secondaryFont: "Roboto", sans-serif;
+  --border-radius: 10px;
 }
 /* * { 
   margin: 0;
@@ -16,6 +17,9 @@
   display: flex;
   justify-content: space-between;
   justify-items: center;
+  background: var(--primaryColor);
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
 }
 
 .header h1 {
@@ -23,6 +27,7 @@
   font-family: var(--primaryFont);
   font-size: 3rem;
   margin-top: 16px;
+  margin-left: 20px;
 }
 
 .head-links {
@@ -42,4 +47,36 @@
 .head-links a {
   text-decoration: none;
   color: var(--secondaryColor);
+}
+
+/* .top-accent {
+  background-image: url(./images/codeScreen.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  border-radius: 10px;
+} */
+
+.top-accent {
+  position: relative;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  color: var(--secondaryColor);
+  font-family: var(--primaryFont);
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: var(--border-radius);
+  padding: 10px;
+}
+
+.top-accent img {
+  width: 100%;
+  height: 200px;
+  image-rendering: auto;
+  border-radius: var(--border-radius);
+  opacity: 80%;
 }
