@@ -15,7 +15,7 @@
   padding: 0;
 }
 
-body{
+body {
   background-image: url(./images/moroccan-flower.png);
 }
 
@@ -73,7 +73,6 @@ button {
   cursor: pointer;
   transition: all 0.3s ease 0s;
   margin-left: 20px;
-
 }
 
 button:hover {
@@ -109,8 +108,9 @@ button:hover {
 
 .about-me {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   align-items: center;
+  margin-left: 135px;
   width: 80%;
 }
 
@@ -125,13 +125,37 @@ button:hover {
 .about-me p {
   justify-content: flex-end;
   font-size: 2rem;
+  margin-left: 20px;
 }
 
 .work {
+  position: relative;
   display: flex;
 }
 
-.work a {
-  width: 50%
+.work img {
+  opacity: 70%;
 }
 
+.top-left {
+  position: absolute;
+  top: 20px;
+  left: 375px;
+  font-size: 1rem;
+  font-family: var(--secondaryFont);
+  background: var(--primaryColor);
+  padding: 1%;
+  border: 2px solid black;
+  color: white;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--primaryColor);
+}
+
+.contact a {
+  text-decoration: underline;
+}
