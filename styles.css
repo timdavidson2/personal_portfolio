@@ -15,6 +15,10 @@
   padding: 0;
 }
 
+body{
+  background-image: url(./images/moroccan-flower.png);
+}
+
 li,
 a,
 button {
@@ -105,9 +109,9 @@ button:hover {
 
 .about-me {
   display: flex;
-  justify-content: center;
+  justify-content:flex-end;
   align-items: center;
-  width: 75%;
+  width: 80%;
 }
 
 .title {
@@ -119,6 +123,15 @@ button:hover {
 }
 
 .about-me p {
+  justify-content: flex-end;
   font-size: 2rem;
+}
+
+.work {
+  display: flex;
+}
+
+.work a {
+  width: 50%
 }
 
