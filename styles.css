@@ -28,29 +28,36 @@ button {
   text-decoration: none;
 }
 
-header {
+.flex {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
   align-items: center;
   background: var(--primaryColor);
-  padding: 30px 5%;
+  padding-bottom: 30px;
+  width: 100%;
 }
 
 .logo {
   cursor: pointer;
   font-family: var(--primaryFont);
-  margin-right: auto;
   padding: 10px;
   font-size: 3rem;
 }
 
 .nav-links {
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
+  /* margin: 10px; */
 }
 
 .nav-links li {
-  display: inline-block;
-  padding: 0px 20px;
+  padding: 10px 20px;
+  border-bottom: 3px solid black;
+  width: 100%;
 }
 
 .nav-links li a {
@@ -68,11 +75,11 @@ button {
   padding: 10px 25px;
   background-color: var(--secondaryColor);
   color: var(--thirdColor);
-  border: none;
   border-radius: 25px;
+  border: none;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  margin-left: 20px;
+  margin: 20px;
 }
 
 button:hover {
@@ -89,7 +96,7 @@ button:hover {
 .bottom-right {
   position: absolute;
   bottom: 20px;
-  right: 100px;
+  right: 200px;
   font-size: 3rem;
   font-family: var(--primaryFont);
   background: var(--primaryColor);
@@ -108,29 +115,32 @@ button:hover {
 
 .about-me {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-left: 135px;
-  width: 80%;
+  width: 90%;
 }
 
 .title {
   font-family: var(--primaryFont);
   font-size: 3rem;
-  border-right: 3px solid black;
+  border-bottom: 3px solid black;
   padding: 20px;
   margin: 30px;
 }
 
 .about-me p {
-  justify-content: flex-end;
+  text-align: center;
   font-size: 2rem;
-  margin-left: 20px;
+  padding: 5px;
 }
 
 .work {
   position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .work img {
@@ -152,6 +162,7 @@ button:hover {
 
 .contact {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: var(--primaryColor);
@@ -159,4 +170,48 @@ button:hover {
 
 .contact a {
   text-decoration: underline;
+  margin: 10px;
+}
+
+@media screen and (min-width: 900px) {
+  .flex {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .nav-links {
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    border: none;
+  }
+  .nav-links li {
+    border: none;
+  }
+  .logo {
+    margin-right: auto;
+  }
+
+  .about-me {
+    flex-direction: row;
+    margin: 20px;
+  }
+
+  .about-me p {
+    text-align: left;
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  .title {
+    border-right: 3px solid black;
+    border-bottom: none;
+  }
+
+  .work {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .contact {
+    flex-direction: row;
+  }
 }
