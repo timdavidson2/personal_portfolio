@@ -42,6 +42,9 @@ button {
   font-family: var(--primaryFont);
   padding: 10px;
   font-size: 3rem;
+  background-color: var(--thirdColor);
+  border-radius: var(--border-radius);
+  margin: 20px 10px ;
 }
 
 .nav-links {
