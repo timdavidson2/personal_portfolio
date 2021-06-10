@@ -176,6 +176,14 @@ button:hover {
   color: white;
 }
 
+.resume{
+  font-family: var(--secondaryFont);
+  font-size: 2rem;
+  margin: 10px;
+  text-align: center;
+}
+
+
 .contact {
   display: flex;
   flex-direction: column;
