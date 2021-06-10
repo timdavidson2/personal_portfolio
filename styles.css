@@ -44,7 +44,7 @@ button {
   font-size: 3rem;
   background-color: var(--thirdColor);
   border-radius: var(--border-radius);
-  margin: 20px 10px ;
+  margin: 20px 10px;
 }
 
 .nav-links {
@@ -121,21 +121,27 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
-}
-
-.title {
+  width: 100%;
   font-family: var(--primaryFont);
-  font-size: 3rem;
+  font-size: 2rem;
   border-bottom: 3px solid black;
   padding: 20px;
   margin: 30px;
 }
 
+/* .title {
+  font-family: var(--primaryFont);
+  font-size: 3rem;
+  border-bottom: 3px solid black;
+  padding: 20px;
+  margin: 30px;
+} */
+
 .about-me p {
   text-align: center;
   font-size: 2rem;
   padding: 5px;
+  font-family: var(--secondaryFont);
 }
 
 .work {
@@ -144,16 +150,23 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: var(--primaryFont);
+  font-size: 2rem;
+  border-bottom: 3px solid black;
+  /* padding: 20px;
+  margin: 30px; */
 }
 
 .work img {
+  position: relative;
   opacity: 70%;
   margin: 20px;
+  width: 85%;
 }
 
 .top-left {
   position: absolute;
-  top: 20px;
+  top: 200px;
   left: 375px;
   font-size: 1rem;
   font-family: var(--secondaryFont);
@@ -169,12 +182,16 @@ button:hover {
   justify-content: space-around;
   align-items: center;
   background-color: var(--primaryColor);
+  font-family: var(--primaryFont);
+  font-size: 2rem;
 }
 
 .contact a {
   text-decoration: underline;
   margin: 10px;
 }
+
+/* MEDIA QUERIES */
 
 @media screen and (min-width: 900px) {
   .flex {
@@ -183,12 +200,18 @@ button:hover {
   }
   .nav-links {
     flex-direction: row;
-    /* justify-content: flex-end; */
+    justify-content: flex-end;
     border: none;
   }
   .nav-links li {
     border: none;
+    flex-wrap: nowrap;
   }
+
+  .nav-links li a {
+    width: 100%;
+  }
+
   .logo {
     margin-right: auto;
   }
@@ -196,25 +219,34 @@ button:hover {
   .about-me {
     flex-direction: row;
     margin: 20px;
+    border-bottom: none;
   }
 
   .about-me p {
     text-align: left;
     font-size: 2rem;
-    padding: 5px;
+    border-left: 3px solid black;
+    width: 85%;
   }
 
   .title {
-    border-right: 3px solid black;
     border-bottom: none;
+    margin: 20px;
   }
 
   .work {
     flex-direction: row;
     justify-content: flex-start;
+    border-bottom: none;
+    margin-right: -2px;
+  }
+
+  .work img {
+    border-left: 3px solid black;
   }
 
   .contact {
     flex-direction: row;
+    font-size: 2rem;
   }
 }
