@@ -7,3 +7,7 @@
 - This will make it easier to share skills and experience with potential employers.
 
 - Once finished and deployed the user will be able to provide the URL to employers for an easy reference.
+
+## Mock-up
+
+![portfolio demo](./images/mockup.png)
